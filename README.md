@@ -11,7 +11,15 @@ Developing more user frendly DSL for generating PDF files. It could be used in o
 - Install dependencies: `pip install -r requirements.txt`
 
 ## Features
-
+-  PDF file elements
+-  Font customization
+-  Images
+-  Blocks for dynamic text
+-  Text customization (Size, Bolded, Underline, Italic)
+-  Tabels
+-  PDF Templates (for contracts, reports...)
+-  Including DSL features into Python module
+-  VSCode plugin
 ### Must have
 
 ### Nice to have
