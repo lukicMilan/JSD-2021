@@ -1,5 +1,8 @@
 # Generating PDF file using a DSL
-
+## Team
+  - Nikola Zejak E2 140/2021
+  - Milan Lukić E2 77/2021
+  - Milana Tucakov E2 138/2021
 ## General Idea
 Developing a DSL for generating PDF files. It could be used in other apps as a tool for generating dynamic reports, contracts, invoices etc.
 
