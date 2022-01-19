@@ -1,4 +1,14 @@
 Program:
     'begin'
+        'title: ' title=Title
+        ('paragraph: ' paragraph=Paragraph)*
     'end'
+;
+
+Title:
+    STRING
+;
+
+Paragraph:
+    STRING
 ;
