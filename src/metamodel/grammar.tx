@@ -1,14 +1,141 @@
 Program:
     'begin'
-        'title: ' title=Title
-        ('paragraph: ' paragraph=Paragraph)*
+        blocks*=Block
     'end'
 ;
 
+Block:
+    Title | Paragraph | BankReport
+;
+
+BankReport:
+    "Potvrdjujem da je " NameSurname " , JMBG " JMBG /\n/
+    "iz " FullAddres " (adresa), sa licnom kartom broj " IdentityCard /\n/
+    "izdatom od MUP " Mup ", po zanimanju " Job /\n/
+    "zaposlen/a u " Company " (naziv poslodavca)" /\n/
+    "na odredjeno vreme od dana " JobDate " godine , na neodredjeno vreme pocev od " JobDate " godine" /\n/
+    "na radnom mestu " WorkPlace " , telefon na poslu " Phone /\n/
+    "U momentu izdavanja ove potvrde " NameSurname " je ostvario/la ukupan radni staz" /\n/
+    "u trajanju od " /\d+/ " i " /\d+/ " meseci. Prosecna zarada zaposlenog u prehodna  3 meseca iznosi" /\n/
+    "BRUTO " Salary " dinara, NETO " Salary " dinara." /\n/
+    "Na zaradu imenovanog obustavlja se mesecno iznos od " Amount "dinara." /\n/
+    "Zarada zaposlenog se isplacuje na sledeci racun " BankAccount "kod poslovne banke " Bank /\n/
+    "Ova potvrda se izdaje radi podnosenja zahteva za kreditnu karticu i/ili kredit i/ili odobravanje dozvoljenog" /\n/
+    "prekoracenja po tekucem racunu kod " Bank " i ne moze se koristiti u druge svrhe." /\n/
+    "Podaci o preduzecu:" /\n/
+    "Naziv preduzeca " Company /\n/
+    "Adresa preduzeca " CompanyAddress /\n/
+    "Maticni broj preduzeca " /\d+/ /\n/
+    "Pib preduzeca " Pib /\n/
+    "Delatnost " WorkField /\n/
+    "Kontakt osoba u sluzbi za obracun zarada " NameSurname /\n/
+    "Ova potvrda izdaje se od strane ovlascenih lica, pod punom materijalnom i krivicnom odgovornoscu."/\n/
+    NameSurname /\n/
+    UnderLine /\n/
+    "Potpis" /\n/
+    UnderLine 
+;
+
 Title:
-    STRING
+    'title: ' title=STRING
 ;
 
 Paragraph:
+    'paragraph: ' paragraph=STRING
+;
+
+IdentityCard:
+    /\d{9}/
+;
+
+Bank:
     STRING
+;
+
+BankAccount:
+    /\d{3}-\d{13}-\d{2}/
+;
+
+Company:
+    STRING
+;
+
+CompanyAddress:
+    STRING
+;
+
+WorkField:
+    STRING
+;
+
+Pib:
+    /\d+/
+;
+
+WorkPlace:
+    STRING
+;
+
+Salary:
+    Bruto | Neto
+;
+
+Bruto:
+    /\d+,\d+\.\d{2}/
+;
+
+Neto:
+    /\d+,\d+\.\d{2}/
+;
+
+Amount:
+    /\d+,\d+\.\d{2}/
+;
+
+Phone:
+    /\d+/
+;
+
+JobDate:
+    /\d{2|\/\d{2}\/\d{4}/
+;
+
+Job:
+    STRING
+;
+
+FullAddres:
+    City ', ' Country ', ' Address
+;
+
+Mup:
+    'PU ' City
+;
+
+Address:
+    'address: ' address=STRING /\d+/
+;
+
+City:
+    'city: ' city=STRING
+;
+
+Country:
+    'city: ' city=STRING
+;
+
+DateOfBirth:
+    'date of birth: ' dateOfBirth=/\d{2}\.\d{2}\.\d{4}/
+;
+
+NameSurname:
+    'name and surname: ' nameSurname=STRING
+;
+
+JMBG:
+    'jmbg: ' jmbg=/\d{13}/
+;
+
+UnderLine:
+    /_+/
 ;
