@@ -5,7 +5,7 @@ Program:
 ;
 
 Block:
-    Title | Paragraph | BankReport
+    Title | Paragraph | "bank_report: {"/\n/ bank_report=BankReport /\n/"}"
 ;
 
 BankReport:
