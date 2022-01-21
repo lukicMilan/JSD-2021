@@ -1,3 +1,4 @@
 Jinja2==2.11.2
 textX==2.3.0
 pdfkit==1.0.0
+wkhtmltopdf==0.2
