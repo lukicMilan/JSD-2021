@@ -1,24 +1,24 @@
 class Document:
 
   def __init__(self):
+    self.type = ""
     self.title = ""
     self.paragraph_list = []
 
   def __str__(self):
-    returnStr = ""
-
-    returnStr += f"We have title: {self.title}\n"
-    returnStr += f"And paragraph: \n"
+    paragraph_string = f"Paragraph: \n"
 
     i = 0
     for p in self.paragraph_list:
-      returnStr += f"[{i}] {p}\n\n"
+      paragraph_string += f"[{i}] {p}\n\n"
       i+=1
 
-    return returnStr
+    return f"Type: {self.type}\nTitle: {self.title}\n" + paragraph_string
 
   def interpreter(self, model):
     for block in model.blocks:
+      if hasattr(block, 'type'):
+        self.type = block.type
       if hasattr(block, 'title'):
         self.title = block.title
       
@@ -26,8 +26,14 @@ class Document:
         self.paragraph_list.append(block.paragraph)
 
   def get_dict(self):
-    
-    return {
-      "title": self.title,
-      "paragraph_list": self.paragraph_list
+    default_template = {
+        "title": self.title,
+        "paragraph_list": self.paragraph_list
+      }
+
+    # TODO: Make more templates based on PDF type needed
+    switcher = {
+      "default": default_template
     }
+    
+    return switcher.get(self.type, default_template)

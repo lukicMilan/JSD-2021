@@ -5,7 +5,10 @@ Program:
 ;
 
 Block:
-    Title | Paragraph | "bank_report: {"/\n/ bank_report=BankReport /\n/"}"
+    Type | Title | Paragraph | "bank_report: {"/\n/ bank_report=BankReport /\n/"}"
+
+Type:
+    'type: ' type=STRING
 ;
 
 BankReport:
