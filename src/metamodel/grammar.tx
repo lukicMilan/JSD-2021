@@ -5,35 +5,34 @@ Program:
 ;
 
 Block:
-    Title | Paragraph | BankReport
+    Title | Paragraph | "bank_report: {"/\n/ bank_report=BankReport /\n/"}"
 ;
 
 BankReport:
-    "Potvrdjujem da je " NameSurname " , JMBG " JMBG /\n/
-    "iz " FullAddres " (adresa), sa licnom kartom broj " IdentityCard /\n/
-    "izdatom od MUP " Mup ", po zanimanju " Job /\n/
-    "zaposlen/a u " Company " (naziv poslodavca)" /\n/
-    "na odredjeno vreme od dana " JobDate " godine , na neodredjeno vreme pocev od " JobDate " godine" /\n/
-    "na radnom mestu " WorkPlace " , telefon na poslu " Phone /\n/
-    "U momentu izdavanja ove potvrde " NameSurname " je ostvario/la ukupan radni staz" /\n/
-    "u trajanju od " /\d+/ " i " /\d+/ " meseci. Prosecna zarada zaposlenog u prehodna  3 meseca iznosi" /\n/
-    "BRUTO " Salary " dinara, NETO " Salary " dinara." /\n/
-    "Na zaradu imenovanog obustavlja se mesecno iznos od " Amount "dinara." /\n/
-    "Zarada zaposlenog se isplacuje na sledeci racun " BankAccount "kod poslovne banke " Bank /\n/
-    "Ova potvrda se izdaje radi podnosenja zahteva za kreditnu karticu i/ili kredit i/ili odobravanje dozvoljenog" /\n/
-    "prekoracenja po tekucem racunu kod " Bank " i ne moze se koristiti u druge svrhe." /\n/
-    "Podaci o preduzecu:" /\n/
-    "Naziv preduzeca " Company /\n/
-    "Adresa preduzeca " CompanyAddress /\n/
-    "Maticni broj preduzeca " /\d+/ /\n/
-    "Pib preduzeca " Pib /\n/
-    "Delatnost " WorkField /\n/
-    "Kontakt osoba u sluzbi za obracun zarada " NameSurname /\n/
-    "Ova potvrda izdaje se od strane ovlascenih lica, pod punom materijalnom i krivicnom odgovornoscu."/\n/
-    NameSurname /\n/
-    UnderLine /\n/
-    "Potpis" /\n/
-    UnderLine 
+    "name_surname: " name_surname=NameSurname
+    "JMBG: " jmbg=JMBG
+    "address: " full_address=FullAddress
+    "identity_card: " identity_card=IdentityCard
+    "identity_card_city " identity_card_city=IdentityCardCity
+    "job_title: " job_title=JobTitle
+    "complany: " complany=Company
+    "start_date: " start_date=Date
+    "permanent_start_date: " permanent_start_date=Date
+    "work_place: " work_place=WorkPlace
+    "phone: " phone=Phone
+    "work_year: " work_year=Digit
+    "work_month: " work_month=Digit
+    "bruto: " bruto=Amount
+    "neto: " neto=Amount
+    "suspension: " suspension=Amount
+    "bank_account: " bank_account=BankAccount
+    "bank: " bank=Bank
+    "company_address: " company_address=FullAddress
+    "company_id_number" company_id_number=Digit
+    "pib: " pib=Pib
+    "work_field: " work_field=WorkField
+    "contact_person " contact_person=NameSurname
+    "authorized_person" authorized_person=NameSurname
 ;
 
 Title:
@@ -76,18 +75,6 @@ WorkPlace:
     STRING
 ;
 
-Salary:
-    Bruto | Neto
-;
-
-Bruto:
-    /\d+,\d+\.\d{2}/
-;
-
-Neto:
-    /\d+,\d+\.\d{2}/
-;
-
 Amount:
     /\d+,\d+\.\d{2}/
 ;
@@ -96,19 +83,19 @@ Phone:
     /\d+/
 ;
 
-JobDate:
+Date:
     /\d{2|\/\d{2}\/\d{4}/
 ;
 
-Job:
+JobTitle:
     STRING
 ;
 
-FullAddres:
+FullAddress:
     City ', ' Country ', ' Address
 ;
 
-Mup:
+IdentityCardCity:
     'PU ' City
 ;
 
@@ -121,7 +108,7 @@ City:
 ;
 
 Country:
-    'city: ' city=STRING
+    'country: ' country=STRING
 ;
 
 DateOfBirth:
@@ -136,6 +123,6 @@ JMBG:
     'jmbg: ' jmbg=/\d{13}/
 ;
 
-UnderLine:
-    /_+/
+Digit:
+    /\d+/
 ;
