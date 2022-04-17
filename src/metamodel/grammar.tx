@@ -5,34 +5,75 @@ Program:
 ;
 
 Block:
-    Title | Paragraph | "bank_report: {"/\n/ bank_report=BankReport /\n/"}"
+    Type | Title | Paragraph | BankReport | StudentskoUverenje
 ;
 
+Type:
+    'type: ' type=TypeExample
+;
+
+TypeExample:
+    'default' | 'uverenje'
+;
+
+StudentskoUverenje:
+    'studentsko_uverenje' ':' studentsko_uverenje=UverenjeInfo
+;
+
+UverenjeInfo:
+    'ime' ':' ime=STRING
+    'datum_rodjenja' ':' datum_rodjenja=STRING
+    'mesto_rodjenja' ':' mesto_rodjenja=STRING
+    'drzava_rodjenja' ':' drzava_rodjenja=STRING
+    'upisana_godina_studija' ':' upisana_godina_studija=STRING
+    'upisana_godina_studija_broj' ':' upisana_godina_studija_broj=/\d+/
+    'tip_studiranja' ':' tip_studiranja=TipStudiranja
+    'tip_studija' ':' tip_studija=TipStudija
+    'mesto_ustanove' ':' mesto_ustanove=STRING
+    'usmerenje' ':' usmerenje=STRING
+    'trajanje' ':' trajanje=/\d+/
+    'broj_semestara' ':' broj_semestara=/\d+/
+    'ovlasceno_lice' ':' ovlasceno_lice=STRING
+;
+
+TipStudija:
+    'OAS'|'MAS'|'SS'|'DS'
+;
+
+TipStudiranja: 
+    'budzetski'|'samofinansirajuci'
+;
+
+
 BankReport:
-    "name_surname: " name_surname=NameSurname
-    "JMBG: " jmbg=JMBG
-    "address: " full_address=FullAddress
-    "identity_card: " identity_card=IdentityCard
-    "identity_card_city " identity_card_city=IdentityCardCity
-    "job_title: " job_title=JobTitle
-    "complany: " complany=Company
-    "start_date: " start_date=Date
-    "permanent_start_date: " permanent_start_date=Date
-    "work_place: " work_place=WorkPlace
-    "phone: " phone=Phone
-    "work_year: " work_year=Digit
-    "work_month: " work_month=Digit
-    "bruto: " bruto=Amount
-    "neto: " neto=Amount
-    "suspension: " suspension=Amount
-    "bank_account: " bank_account=BankAccount
-    "bank: " bank=Bank
-    "company_address: " company_address=FullAddress
-    "company_id_number" company_id_number=Digit
-    "pib: " pib=Pib
-    "work_field: " work_field=WorkField
-    "contact_person " contact_person=NameSurname
-    "authorized_person" authorized_person=NameSurname
+    'name_surname: ' name_surname=STRING
+    'JMBG: ' jmbg=/\d{13}/
+    'address: ' full_address=FullAddress
+    'identity_card: ' identity_card=/\d{9}/
+    'identity_card_city: ' identity_card_city=IdentityCardCity
+    'job_title: ' job_title=STRING
+    'company: ' company=STRING
+    'start_date: ' start_date=DateFormat
+    'permanent_start_date: ' permanent_start_date=DateFormat
+    'work_place: ' work_place=WorkPlace
+    'phone: ' phone=Phone
+    'work_year: ' work_year=Digit
+    'work_month: ' work_month=Digit
+    'bruto: ' bruto=Amount
+    'neto: ' neto=Amount
+    'suspension: ' suspension=Amount
+    'bank_account: ' bank_account=BankAccount
+    'bank: ' bank=Bank
+    'company_address: ' company_address=FullAddress
+    'company_id_number: ' company_id_number=Digit
+    'pib: ' pib=Pib
+    'work_field: ' work_field=WorkField
+    'contact_person: ' contact_person=STRING
+    'authorized_person: ' authorized_person=STRING
+;
+
+DateFormat: 
+    /\d{2}.\d{2}.\d{4}./ 
 ;
 
 Title:
@@ -43,20 +84,12 @@ Paragraph:
     'paragraph: ' paragraph=STRING
 ;
 
-IdentityCard:
-    /\d{9}/
-;
-
 Bank:
     STRING
 ;
 
 BankAccount:
     /\d{3}-\d{13}-\d{2}/
-;
-
-Company:
-    STRING
 ;
 
 CompanyAddress:
@@ -87,12 +120,8 @@ Date:
     /\d{2|\/\d{2}\/\d{4}/
 ;
 
-JobTitle:
-    STRING
-;
-
 FullAddress:
-    City ', ' Country ', ' Address
+    Address ', ' City ', ' Country
 ;
 
 IdentityCardCity:
@@ -100,27 +129,19 @@ IdentityCardCity:
 ;
 
 Address:
-    'address: ' address=STRING /\d+/
+    STRING
 ;
 
 City:
-    'city: ' city=STRING
+    STRING
 ;
 
 Country:
-    'country: ' country=STRING
+    STRING
 ;
 
 DateOfBirth:
     'date of birth: ' dateOfBirth=/\d{2}\.\d{2}\.\d{4}/
-;
-
-NameSurname:
-    'name and surname: ' nameSurname=STRING
-;
-
-JMBG:
-    'jmbg: ' jmbg=/\d{13}/
 ;
 
 Digit:

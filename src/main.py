@@ -23,8 +23,13 @@ def main():
   }
 
   generated_html = "generated.html"
-  document2html(document.get_dict(), 'template.html', generated_html)
-  html2pdf(generated_html, "generated.pdf", options)
+  dictionary = document.get_dict()
+
+  if dictionary:
+    document2html(dictionary, 'template.html', generated_html)
+    html2pdf(generated_html, "generated.pdf", options)
+  else:
+    print('There is no content in dictionary. Please add valid input file.')
 
 if __name__ == "__main__":
   main()

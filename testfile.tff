@@ -1,0 +1,16 @@
+begin
+  studentsko_uverenje:
+    ime: 'Milana, Zivorad, Tucakov'
+    datum_rodjenja: '25.7.1997.'
+    mesto_rodjenja: 'Novi Sad'
+    drzava_rodjenja: 'Srbija'
+    upisana_godina_studija: 'prva'
+    upisana_godina_studija_broj: 1
+    tip_studiranja: budzetski
+    tip_studija: MAS
+    mesto_ustanove: 'Novom Sadu'
+    usmerenje: 'racunarstvo i automatika'
+    trajanje: 4
+    broj_semestara: 8
+    ovlasceno_lice: 'Ovlasceno lice'
+end
