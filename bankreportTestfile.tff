@@ -1,0 +1,27 @@
+begin
+  bank_report:
+    name_surname: 'Nikola Zejak'
+    jmbg: 1004997710370
+    address: 'Stojana Novakovica 1, Sabac, Srbija'
+    identity_card: 010449146
+    identity_card_city: 'Sabac'
+    job_title: 'Java programer'
+    company: 'Levi9'
+    start_date: 17.07.2021
+    permanent_start_date: 17.07.2021
+    work_place: 'Novi Sad'
+    phone: 0668624005
+    work_year: 0
+    work_month: 9
+    bruto: 110,000.00
+    neto: 90,000.00
+    suspension: 100,000.00
+    bank_account: 123-1111111111111-23
+    bank: 'Banca Intesa'
+    company_address: 'Trifkovicev trg 6, Novi Sad'
+    company_id_number: 123
+    pib: 123
+    work_field: 'Programiranje'
+    contact_person: 'Leonardo Neskalic'
+    authorized_person: 'Leonardo Neskalic'
+end
