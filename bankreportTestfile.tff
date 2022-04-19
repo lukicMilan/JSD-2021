@@ -7,8 +7,8 @@ begin
     identity_card_city: 'Sabac'
     job_title: 'Java programer'
     company: 'Levi9'
-    start_date: 17.07.2021
-    permanent_start_date: 17.07.2021
+    start_date: 17.07.2021.
+    permanent_start_date: 17.07.2021.
     work_place: 'Novi Sad'
     phone: 0668624005
     work_year: 0

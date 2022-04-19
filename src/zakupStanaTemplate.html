@@ -9,8 +9,8 @@
 </html>
 
 <html>
-    <title>{{ title }}</title>
-    <style>
+  <title>{{ title }}</title>
+  <style>
     body {
       background-color: white;
       text-align: center;
@@ -53,126 +53,142 @@
     .left-alignment {
       text-align: left;
     }
-    </style>
-    <body>
-        <h1>Ugovor o zakupu stana</h1>
-        <div>
-            <div class="left-alignment">
-                <p><b>Zakljucen u</b></p>
-                <p class="border-bottom" style="width: 30%">{{mesto_zakljucenja}}</p>
-                <p>dana</p>
-                <p class="border-bottom" style="width: 30%">{{datum_zakljucenja}}</p>
-            </div>
-        </div>
-        <div>
-            <div class="left-alignment">
-                <p><b>Zakupodavac</b></p>
-                <p class="border-bottom" style="width: 25%">{{zakupodavac}}</p>
-                <p>mesto</p>
-                <p class="border-bottom" style="width: 25%">{{grad_zakupodavca}}</p>
-                <p>ul. </p>
-                <p class="border-bottom" style="width: 25%">{{ulica_zakupodavca}}</p>
-            </div>
-            <div class="left-alignment">
-                <p>mat. br.</p>
-                <p class="border-bottom" style="width: 20%">{{jmbg_zakupodavca}}</p>
-                <p>br. lk. </p>
-                <p class="border-bottom" style="width: 20%">{{licna_karta_zakupodavca}}</p>
-            </div>
-        </div>
-        <div>
-            <div class="left-alignment">
-                <p><b>Zakupac</b></p>
-                <p class="border-bottom" style="width: 25%">{{zakupac}}</p>
-                <p>mesto</p>
-                <p class="border-bottom" style="width: 25%">{{grad_zakupca}}</p>
-                <p>ul. </p>
-                <p class="border-bottom" style="width: 25%">{{ulica_zakupca}}</p>
-            </div>
-            <div class="left-alignment">
-                <p>mat. br.</p>
-                <p class="border-bottom" style="width: 20%">{{jmbg_zakupca}}</p>
-                <p>br. lk. </p>
-                <p class="border-bottom" style="width: 20%">{{licna_karta_zakupca}}</p>
-            </div>
-        </div>
-        <div>
-            <div  class="left-alignment">
-                <h3 style="text-align: left">Clan 1.</h3>
-                <p>Zakupodavac je vlasnik stana u</p>
-                <p class="border-bottom" style="width: 25%">{{grad_stana}}</p>
-                <p>, ulica </p>
-                <p class="border-bottom" style="width: 25%">{{ulica_stana}}</p>
-            </div>
-            <div class="left-alignment">
-                <p>br. stana</p>
-                <p class="border-bottom" style="width: 5%">{{broj_stana}}</p>
-                <p>, na</p>
-                <p class="border-bottom" style="width: 5%">{{sprat_stana}}</p>
-                <p> spratu,</p>
-                <p>koji se sastoji od</p>
-                <p class="border-bottom" style="width: 5%">{{broj_soba}}</p>
-                <p>sobe,</p>
-                <p class="border-bottom" style="width: 5%">{{broj_kuhinja}}</p>
-                <p>kuhinje sa trpezarijom,</p>
-            </div>
-            <div class="left-alignment">
-                <p class="border-bottom" style="width: 5%">{{broj_kupatila}}</p>
-                <p>kupatila, hodnika i </p>
-                <p class="border-bottom" style="width: 5%">{{broj_terasa}}</p>
-                <p>ukupne povrsine od </p>
-                <p class="border-bottom" style="width: 5%">{{povrsina_stana}}</p>
-                <p>m2.</p>
-            </div>
-        </div>
-        <div>
-            <div class="left-alignment">
-                <h3 style="text-align: left">Clan 2.</h3>
-                <p>Predmet ovog ugovora je zakup celog stana koji se izdaje kao namesten/nenamesten.</p>
-            </div>
-        </div>
-        <div>
-            <div class="left-alignment"> 
-                <h3 style="text-align: left">Clan 3.</h3>
-                <p>Stan se izdaje na ne/odredjeno vreme, od</p>
-                <p class="border-bottom" style="width: 12%">{{datum_izdavanja}}</p>
-                <p> do </p>
-                <p class="border-bottom" style="width: 12%">{{datum_izlaska}}</p>
-                <p>s tim sto nakon isteka ugovornog perioda postoji mogucnost produzenja istog.</p>
-            </div>
-        </div>
-        <div>
-            <div class="left-alignment">
-                <h3 style="text-align: left">Clan 4.</h3>
-                <p>Dogovorena je mesecna zakupnina od</p>
-                <p class="border-bottom" style="width: 10%">{{zakupnina}} eura</p>
-                <p>uz depozit u visini jedne mesecne zakupnine;</p>
-                <p>placanje zakupnine je mesecno, za tekuci mesec unapred.</p>
-            </div>  
-        </div>
-        <div>
-            <div class="left-alignment">
-                <h3 style="text-align: left">Clan 5.</h3>
-                <p>U toku ugovornog perioda zakupodavac nema pravo da povecava iznos mesecne zakupnine</p>
-            </div>
-        </div>
-        <div>
-            <div class="left-alignment">
-                <h3 style="text-align: left">Clan 6.</h3>
-                <p>Zakupac se obavezuje da pored zakupnine iz clana 4. ovog ugovora, placa racun za telefon,<br>
-                    racun za utrosenu vodu, racun za struju po obracunu EPS-a, zajednicke troskove odrzavanja zgrade,<br>
-                    kao i racun Objedinjene naplate - JKP.
-                </p>
-            </div>
-        </div>
-        <div>
-            <div class="left-alignment">
-                <h3 style="text-align: left">Clan 7.</h3>
-                <p>Zakupac moze stan iz clana 1. ovog ugovora koristiti iskljucivo za stanovanje.<br>
-                    Zakupac nema pravo izdavanja stana u podzakup.<br>
-                    Zakupac je duzan da pri koriscenju stana i zajednickih prostorija
-                </p>
-            </div>
-        </div>
-    </body>
+  </style>
+  <body>
+    <h1>Ugovor o zakupu stana</h1>
+    <div>
+      <div class="left-alignment">
+        <p><b>Zakljucen u</b></p>
+        <p class="border-bottom" style="width: 30%">{{mesto_zakljucenja}}</p>
+        <p>dana</p>
+        <p class="border-bottom" style="width: 30%">{{datum_zakljucenja}}</p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <p><b>Zakupodavac</b></p>
+        <p class="border-bottom" style="width: 25%">{{zakupodavac}}</p>
+        <p>mesto</p>
+        <p class="border-bottom" style="width: 25%">{{grad_zakupodavca}}</p>
+        <p>ul.</p>
+        <p class="border-bottom" style="width: 25%">{{ulica_zakupodavca}}</p>
+      </div>
+      <div class="left-alignment">
+        <p>mat. br.</p>
+        <p class="border-bottom" style="width: 20%">{{jmbg_zakupodavca}}</p>
+        <p>br. lk.</p>
+        <p class="border-bottom" style="width: 20%">
+          {{licna_karta_zakupodavca}}
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <p><b>Zakupac</b></p>
+        <p class="border-bottom" style="width: 25%">{{zakupac}}</p>
+        <p>mesto</p>
+        <p class="border-bottom" style="width: 25%">{{grad_zakupca}}</p>
+        <p>ul.</p>
+        <p class="border-bottom" style="width: 25%">{{ulica_zakupca}}</p>
+      </div>
+      <div class="left-alignment">
+        <p>mat. br.</p>
+        <p class="border-bottom" style="width: 20%">{{jmbg_zakupca}}</p>
+        <p>br. lk.</p>
+        <p class="border-bottom" style="width: 20%">{{licna_karta_zakupca}}</p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <h3 style="text-align: left">Clan 1.</h3>
+        <p>Zakupodavac je vlasnik stana u</p>
+        <p class="border-bottom" style="width: 25%">{{grad_stana}}</p>
+        <p>, ulica</p>
+        <p class="border-bottom" style="width: 25%">{{ulica_stana}}</p>
+      </div>
+      <div class="left-alignment">
+        <p>br. stana</p>
+        <p class="border-bottom" style="width: 5%">{{broj_stana}}</p>
+        <p>, na</p>
+        <p class="border-bottom" style="width: 5%">{{sprat_stana}}</p>
+        <p>spratu,</p>
+        <p>koji se sastoji od</p>
+        <p class="border-bottom" style="width: 5%">{{broj_soba}}</p>
+        <p>sobe,</p>
+        <p class="border-bottom" style="width: 5%">{{broj_kuhinja}}</p>
+        <p>kuhinje sa trpezarijom,</p>
+      </div>
+      <div class="left-alignment">
+        <p class="border-bottom" style="width: 5%">{{broj_kupatila}}</p>
+        <p>kupatila, hodnika i</p>
+        <p class="border-bottom" style="width: 5%">{{broj_terasa}}</p>
+        <p>ukupne povrsine od</p>
+        <p class="border-bottom" style="width: 5%">{{povrsina_stana}}</p>
+        <p>m2.</p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <h3 style="text-align: left">Clan 2.</h3>
+        <p>
+          Predmet ovog ugovora je zakup celog stana koji se izdaje kao
+          namesten/nenamesten.
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <h3 style="text-align: left">Clan 3.</h3>
+        <p>Stan se izdaje na ne/odredjeno vreme, od</p>
+        <p class="border-bottom" style="width: 12%">{{datum_izdavanja}}</p>
+        <p>do</p>
+        <p class="border-bottom" style="width: 12%">{{datum_izlaska}}</p>
+        <p>
+          s tim sto nakon isteka ugovornog perioda postoji mogucnost produzenja
+          istog.
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <h3 style="text-align: left">Clan 4.</h3>
+        <p>Dogovorena je mesecna zakupnina od</p>
+        <p class="border-bottom" style="width: 10%">{{zakupnina}} eura</p>
+        <p>uz depozit u visini jedne mesecne zakupnine;</p>
+        <p>placanje zakupnine je mesecno, za tekuci mesec unapred.</p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <h3 style="text-align: left">Clan 5.</h3>
+        <p>
+          U toku ugovornog perioda zakupodavac nema pravo da povecava iznos
+          mesecne zakupnine
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <h3 style="text-align: left">Clan 6.</h3>
+        <p>
+          Zakupac se obavezuje da pored zakupnine iz clana 4. ovog ugovora,
+          placa racun za telefon,<br />
+          racun za utrosenu vodu, racun za struju po obracunu EPS-a, zajednicke
+          troskove odrzavanja zgrade,<br />
+          kao i racun Objedinjene naplate - JKP.
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="left-alignment">
+        <h3 style="text-align: left">Clan 7.</h3>
+        <p>
+          Zakupac moze stan iz clana 1. ovog ugovora koristiti iskljucivo za
+          stanovanje.<br />
+          Zakupac nema pravo izdavanja stana u podzakup.<br />
+          Zakupac je duzan da pri koriscenju stana i zajednickih prostorija
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

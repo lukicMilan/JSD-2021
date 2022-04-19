@@ -9,8 +9,8 @@
 </html>
 
 <html>
-    <title>{{ title }}</title>
-    <style>
+  <title>{{ title }}</title>
+  <style>
     body {
       background-color: white;
       text-align: center;
@@ -53,115 +53,128 @@
     .left-alignment {
       text-align: left;
     }
-    </style>
-    <body>
-        <h1>Izvestaj Banca Intesa</h1>
-        <div>
-            <p>Potvrdjujem da je</p>
-            <p class="name-field">&nbsp;{{name_surname}}</p>
-            <p>, JMBG</p>
-            <p class="border-bottom" style="width: 20%">&nbsp;{{jmbg}}&nbsp;</p>
-        </div>
-        <div>
-            <p>iz</p>
-            <p class="border-bottom" style="width: 45%">&nbsp;{{address}}&nbsp;</p>
-            <p>(adresa), sa licnom kartom broj</p>
-            <p class="border-bottom" style="width: 18%">{{identity_card}}</p>
-        </div>
-        <div>
-            <p>izdatom od MUP</p>
-            <p class="border-bottom" style="width: 45%">&nbsp;{{identity_card_city}}&nbsp;</p>
-            <p>, po zanimanju </p>
-            <p class="border-bottom" style="width: 20%">&nbsp;{{job_title}}&nbsp;</p>
-        </div>
-        <div>
-            <p>zaposlen/a u </p>
-            <p class="border-bottom" style="width: 67%">&nbsp;{{company}}&nbsp;</p>
-            <p>(naziv poslodavca)</p>
-        </div>
-        <div>
-            <p>na odredjeno vreme od dana </p>
-            <p class="border-bottom" style="width: 30%">&nbsp;{{start_date}}&nbsp;</p>
-            <p>godine, na neodredjeno vreme pocev od</p>
-        </div>
-        <div>
-            <p class="border-bottom" style="width: 25%">&nbsp;{{permanent_start_date}}&nbsp;</p>
-            <p>godine, na radnom mestu</p>
-            <p class="border-bottom" style="width: 15%">&nbsp;{{work_place}}&nbsp;</p>
-            <p>, telefon na poslu</p>
-            <p class="border-bottom" style="width: 15%">{{phone}}</p>
-        </div>
-        <div>
-            <p>U momentu izdavanja ove potvrde</p>
-            <p class="name-field" style="width: 32.5%">&nbsp;{{name_surname}}&nbsp;</p>
-            <p>je ostvario/la ukupan radni staz</p>
-        </div>
-        <div>
-            <p>u trajanju od</p>
-            <p class="border-bottom" style="width: 6%">{{work_year}}</p>
-            <p>godina i</p>
-            <p class="border-bottom" style="width: 6%">{{work_month}}</p>
-            <p>meseci. Prosecna zarada zaposlenog u prehodna  3 meseca iznosi</p>
-        </div>
-        <div>
-            <p>bruto</p>
-            <p class="border-bottom" style="width: 36.5%">{{bruto}}</p>
-            <p>dinara, </p>
-            <p>neto</p>
-            <p class="border-bottom" style="width: 36.5%">{{neto}}</p>
-            <p>dinara.</p>
-        </div>
-        <div>
-            <p>Na zaradu imenovanog obustavlja se mesecno iznos od</p>
-            <p class="border-bottom" style="width: 36.5%">&nbsp;{{suspension}}&nbsp;</p>
-            <p>dinara.</p>
-        </div>
-        <div>
-            <p>Zarada zaposlenog se isplacuje na sledeci racun</p>
-            <p class="border-bottom" style="width: 25%">{{bank_account}}</p>
-            <p>u banci</p>
-            <p class="border-bottom" style="width: 18%">{{bank}}</p>
-        </div>
-        <div>
-            <p>Ova potvrda se izdaje radi podnosenja zahteva za</p>
-            <p class="border-bottom" style="width: 50%">kreditnu karticu i/ili kredit i/ili odobravanje</p>
-            <p>dozvoljenog prekoracenja tekuceg racuna kod</p>
-            <p class="border-bottom" style="width: 17%">{{bank}}</p>
-            <p>i ne moze se koristiti u druge svrhe.</p>
-        </div>
-        <div style="text-align: left">
-            <p class="left-alignment">Naziv preduzeca:</p>
-            <p class="border-bottom" style="width: 20%">{{company}}</p>
-        </div>
-        <div style="text-align: left">
-            <p class="left-alignment"><br>Adresa preduzeca: </p>
-            <p class="border-bottom" style="width: 30%">{{company_address}}</p>
-        </div>
-        <div style="text-align: left">
-            <p class="left-alignment"><br>Maticni broj preduzeca</p>
-            <p class="border-bottom" style="width: 20%">{{company_id_number}}</p>
-        </div>
-        <div style="text-align: left">
-            <p class="left-alignment"><br>Pib preduzeca</p>
-            <p class="border-bottom" style="width: 20%">{{pib}}</p>
-        </div>
-        <div style="text-align: left">
-            <p class="left-alignment"><br>Delatnost</p>
-            <p class="border-bottom" style="width: 20%">{{work_field}}</p>
-        </div>
-        <div style="text-align: left">
-            <p class="left-alignment">Kontakt osoba u sluzbi za obracun zarada</p>
-            <p class="border-bottom" style="width: 20%">{{contact_person}}</p>
-        </div>
-        <div style="text-align: left">
-            <p class="left-alignment">Ova potvrda izdaje se od strane ovlascenih lica, pod punom materijalnom i krivicnom odgovornoscu: {{authorized_person}}</p>
-        </div>
-        <div style="text-align: right">
-            <p class="right-alignment"><br>Potpis</p>
-            <p style="width: 30%; text-align: right;">_____________________</p>
-        </div>
-        <div style="align-self: right">
-            <img src="../intesa.jpg" style="float: right; margin-right: 10%">
-        </div>
-    </body>
+  </style>
+  <body>
+    <h1>Izvestaj Banca Intesa</h1>
+    <div>
+      <p>Potvrdjujem da je</p>
+      <p class="name-field">&nbsp;{{name_surname}}</p>
+      <p>, JMBG</p>
+      <p class="border-bottom" style="width: 20%">&nbsp;{{jmbg}}&nbsp;</p>
+    </div>
+    <div>
+      <p>iz</p>
+      <p class="border-bottom" style="width: 45%">&nbsp;{{address}}&nbsp;</p>
+      <p>(adresa), sa licnom kartom broj</p>
+      <p class="border-bottom" style="width: 18%">{{identity_card}}</p>
+    </div>
+    <div>
+      <p>izdatom od MUP</p>
+      <p class="border-bottom" style="width: 45%">
+        &nbsp;{{identity_card_city}}&nbsp;
+      </p>
+      <p>, po zanimanju</p>
+      <p class="border-bottom" style="width: 20%">&nbsp;{{job_title}}&nbsp;</p>
+    </div>
+    <div>
+      <p>zaposlen/a u</p>
+      <p class="border-bottom" style="width: 67%">&nbsp;{{company}}&nbsp;</p>
+      <p>(naziv poslodavca)</p>
+    </div>
+    <div>
+      <p>na odredjeno vreme od dana</p>
+      <p class="border-bottom" style="width: 30%">&nbsp;{{start_date}}&nbsp;</p>
+      <p>godine, na neodredjeno vreme pocev od</p>
+    </div>
+    <div>
+      <p class="border-bottom" style="width: 25%">
+        &nbsp;{{permanent_start_date}}&nbsp;
+      </p>
+      <p>godine, na radnom mestu</p>
+      <p class="border-bottom" style="width: 15%">&nbsp;{{work_place}}&nbsp;</p>
+      <p>, telefon na poslu</p>
+      <p class="border-bottom" style="width: 15%">{{phone}}</p>
+    </div>
+    <div>
+      <p>U momentu izdavanja ove potvrde</p>
+      <p class="name-field" style="width: 32.5%">
+        &nbsp;{{name_surname}}&nbsp;
+      </p>
+      <p>je ostvario/la ukupan radni staz</p>
+    </div>
+    <div>
+      <p>u trajanju od</p>
+      <p class="border-bottom" style="width: 6%">{{work_year}}</p>
+      <p>godina i</p>
+      <p class="border-bottom" style="width: 6%">{{work_month}}</p>
+      <p>meseci. Prosecna zarada zaposlenog u prehodna 3 meseca iznosi</p>
+    </div>
+    <div>
+      <p>bruto</p>
+      <p class="border-bottom" style="width: 36.5%">{{bruto}}</p>
+      <p>dinara,</p>
+      <p>neto</p>
+      <p class="border-bottom" style="width: 36.5%">{{neto}}</p>
+      <p>dinara.</p>
+    </div>
+    <div>
+      <p>Na zaradu imenovanog obustavlja se mesecno iznos od</p>
+      <p class="border-bottom" style="width: 36.5%">
+        &nbsp;{{suspension}}&nbsp;
+      </p>
+      <p>dinara.</p>
+    </div>
+    <div>
+      <p>Zarada zaposlenog se isplacuje na sledeci racun</p>
+      <p class="border-bottom" style="width: 25%">{{bank_account}}</p>
+      <p>u banci</p>
+      <p class="border-bottom" style="width: 18%">{{bank}}</p>
+    </div>
+    <div>
+      <p>Ova potvrda se izdaje radi podnosenja zahteva za</p>
+      <p class="border-bottom" style="width: 50%">
+        kreditnu karticu i/ili kredit i/ili odobravanje
+      </p>
+      <p>dozvoljenog prekoracenja tekuceg racuna kod</p>
+      <p class="border-bottom" style="width: 17%">{{bank}}</p>
+      <p>i ne moze se koristiti u druge svrhe.</p>
+    </div>
+    <div style="text-align: left">
+      <p class="left-alignment">Naziv preduzeca:</p>
+      <p class="border-bottom" style="width: 20%">{{company}}</p>
+    </div>
+    <div style="text-align: left">
+      <p class="left-alignment"><br />Adresa preduzeca:</p>
+      <p class="border-bottom" style="width: 30%">{{company_address}}</p>
+    </div>
+    <div style="text-align: left">
+      <p class="left-alignment"><br />Maticni broj preduzeca</p>
+      <p class="border-bottom" style="width: 20%">{{company_id_number}}</p>
+    </div>
+    <div style="text-align: left">
+      <p class="left-alignment"><br />Pib preduzeca</p>
+      <p class="border-bottom" style="width: 20%">{{pib}}</p>
+    </div>
+    <div style="text-align: left">
+      <p class="left-alignment"><br />Delatnost</p>
+      <p class="border-bottom" style="width: 20%">{{work_field}}</p>
+    </div>
+    <div style="text-align: left">
+      <p class="left-alignment">Kontakt osoba u sluzbi za obracun zarada</p>
+      <p class="border-bottom" style="width: 20%">{{contact_person}}</p>
+    </div>
+    <div style="text-align: left">
+      <p class="left-alignment">
+        Ova potvrda izdaje se od strane ovlascenih lica, pod punom materijalnom
+        i krivicnom odgovornoscu: {{authorized_person}}
+      </p>
+    </div>
+    <div style="text-align: right">
+      <p class="right-alignment"><br />Potpis</p>
+      <p style="width: 30%; text-align: right">_____________________</p>
+    </div>
+    <div style="align-self: right">
+      <img src="../intesa.jpg" style="float: right; margin-right: 10%" />
+    </div>
+  </body>
 </html>

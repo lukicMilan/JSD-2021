@@ -47,4 +47,3 @@ class StudentskoUverenje:
 
   def __str__(self):
     return f"ime: {self.ime}\ndatum_rodjenja: {self.datum_rodjenja}\nmesto_rodjenja: {self.mesto_rodjenja}\ndrzava_rodjenja: {self.drzava_rodjenja}\nupisana_godina_studija: {self.upisana_godina_studija}\n"
-
