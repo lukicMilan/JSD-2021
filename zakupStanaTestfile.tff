@@ -1,0 +1,27 @@
+begin
+  zakup_stana:
+    mesto_zakljucenja: 'Novi Sad'
+    datum_zakljucenja: '19.04.2022.'
+    zakupodavac: 'Petar Petrovic'
+    grad_zakupodavca: 'Novi Sad'
+    ulica_zakupodavca: 'Dositejeva 12'
+    jmbg_zakupodavca: 1234567890111
+    licna_karta_zakupodavca: 123456789
+    zakupac: 'Nikola Zejak'
+    grad_zakupca: 'Sabac'
+    ulica_zakupca: 'Gospodar Jevremova 2'
+    jmbg_zakupca: 1212121212121
+    licna_karta_zakupca: 123123123
+    grad_stana: 'Novi Sad'
+    ulica_stana: 'Zeleznicka 18'
+    broj_stana: 7
+    sprat_stana: 2
+    broj_soba: 2
+    broj_kuhinja: 1
+    broj_kupatila: 1
+    broj_terasa: 1
+    povrsina_stana: 49
+    datum_izdavanja: '01.05.2022'
+    datum_izlaska: '01.05.2023'
+    zakupnina: 300
+end

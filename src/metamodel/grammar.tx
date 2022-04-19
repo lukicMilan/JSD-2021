@@ -1,4 +1,183 @@
 Program:
     'begin'
+        blocks*=Block
     'end'
+;
+
+Block:
+    Type | Title | Paragraph | BankReport | StudentskoUverenje | ZakupStana
+;
+
+Type:
+    'type: ' type=TypeExample
+;
+
+TypeExample:
+    'default' | 'uverenje'
+;
+
+StudentskoUverenje:
+    'studentsko_uverenje' ':' studentsko_uverenje=UverenjeInfo
+;
+
+UverenjeInfo:
+    'ime' ':' ime=STRING
+    'datum_rodjenja' ':' datum_rodjenja=STRING
+    'mesto_rodjenja' ':' mesto_rodjenja=STRING
+    'drzava_rodjenja' ':' drzava_rodjenja=STRING
+    'upisana_godina_studija' ':' upisana_godina_studija=STRING
+    'upisana_godina_studija_broj' ':' upisana_godina_studija_broj=/\d+/
+    'tip_studiranja' ':' tip_studiranja=TipStudiranja
+    'tip_studija' ':' tip_studija=TipStudija
+    'mesto_ustanove' ':' mesto_ustanove=STRING
+    'usmerenje' ':' usmerenje=STRING
+    'trajanje' ':' trajanje=/\d+/
+    'broj_semestara' ':' broj_semestara=/\d+/
+    'ovlasceno_lice' ':' ovlasceno_lice=STRING
+;
+
+TipStudija:
+    'OAS'|'MAS'|'SS'|'DS'
+;
+
+TipStudiranja: 
+    'budzetski'|'samofinansirajuci'
+;
+
+ZakupStana:
+    'zakup_stana' ':' zakup_stana=ZakupStanaInfo
+;
+
+ZakupStanaInfo:
+    'mesto_zakljucenja' ':' mesto_zakljucenja=STRING
+    'datum_zakljucenja' ':' datum_zakljucenja=STRING
+    'zakupodavac' ':' zakupodavac=STRING
+    'grad_zakupodavca' ':' grad_zakupodavca=STRING
+    'ulica_zakupodavca' ':' ulica_zakupodavca=STRING
+    'jmbg_zakupodavca' ':' jmbg_zakupodavca=/\d{13}/
+    'licna_karta_zakupodavca' ':' licna_karta_zakupodavca=/\d{9}/
+    'zakupac' ':' zakupac=STRING
+    'grad_zakupca' ':' grad_zakupca=STRING
+    'ulica_zakupca' ':' ulica_zakupca=STRING
+    'jmbg_zakupca' ':' jmbg_zakupca=/\d{13}/
+    'licna_karta_zakupca' ':' licna_karta_zakupca=/\d{9}/
+    'grad_stana' ':' grad_stana=STRING
+    'ulica_stana' ':' ulica_stana=STRING
+    'broj_stana' ':' broj_stana=Digit
+    'sprat_stana' ':' sprat_stana=Digit
+    'broj_soba' ':' broj_soba=Digit
+    'broj_kuhinja' ':' broj_kuhinja=Digit
+    'broj_kupatila' ':' broj_kupatila=Digit
+    'broj_terasa' ':' broj_terasa=Digit
+    'povrsina_stana' ':' povrsina_stana=Digit
+    'datum_izdavanja' ':' datum_izdavanja=STRING
+    'datum_izlaska' ':' datum_izlaska=STRING
+    'zakupnina' ':' zakupnina=Digit
+;
+
+BankReport:
+    'bank_report' ':' bank_report=BankReportInfo
+;
+
+BankReportInfo:
+    'name_surname' ':' name_surname=STRING
+    'jmbg' ':' jmbg=/\d{13}/
+    'address' ':' address=STRING
+    'identity_card' ':' identity_card=/\d{9}/
+    'identity_card_city' ':' identity_card_city=STRING
+    'job_title' ':' job_title=STRING
+    'company' ':' company=STRING
+    'start_date' ':' start_date=DateFormat
+    'permanent_start_date' ':' permanent_start_date=DateFormat
+    'work_place' ':' work_place=WorkPlace
+    'phone' ':' phone=Phone
+    'work_year' ':' work_year=Digit
+    'work_month' ':' work_month=Digit
+    'bruto' ':' bruto=Amount
+    'neto' ':' neto=Amount
+    'suspension' ':' suspension=Amount
+    'bank_account' ':' bank_account=BankAccount
+    'bank' ':' bank=Bank
+    'company_address' ':' company_address=STRING
+    'company_id_number' ':' company_id_number=Digit
+    'pib' ':' pib=Pib
+    'work_field' ':' work_field=WorkField
+    'contact_person' ':' contact_person=STRING
+    'authorized_person' ':' authorized_person=STRING
+;
+
+DateFormat: 
+    /\d{2}.\d{2}.\d{4}./ 
+;
+
+Title:
+    'title: ' title=STRING
+;
+
+Paragraph:
+    'paragraph: ' paragraph=STRING
+;
+
+Bank:
+    STRING
+;
+
+BankAccount:
+    /\d{3}-\d{13}-\d{2}/
+;
+
+CompanyAddress:
+    STRING
+;
+
+WorkField:
+    STRING
+;
+
+Pib:
+    /\d+/
+;
+
+WorkPlace:
+    STRING
+;
+
+Amount:
+    /\d+,\d+\.\d{2}/
+;
+
+Phone:
+    /\d+/
+;
+
+Date:
+    /\d{2|\/\d{2}\/\d{4}/
+;
+
+FullAddress:
+    Address ', ' City ', ' Country
+;
+
+IdentityCardCity:
+    'PU ' City
+;
+
+Address:
+    STRING
+;
+
+City:
+    STRING
+;
+
+Country:
+    STRING
+;
+
+DateOfBirth:
+    /\d{2}\.\d{2}\.\d{4}/
+;
+
+Digit:
+    /\d+/
 ;

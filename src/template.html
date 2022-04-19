@@ -1,0 +1,123 @@
+<html>
+  <title>{{ title }}</title>
+  <body>
+    <h1>{{ title }}</h1>
+    {% for item in paragraph_list %}
+    <p>{{ item }}</p>
+    {% endfor %}
+  </body>
+</html>
+
+<html>
+  <title>{{ title }}</title>
+  <style>
+    body {
+      background-color: white;
+      text-align: center;
+    }
+    h1 {
+      color: black;
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 50px;
+      letter-spacing: 0.2rem;
+    }
+    p {
+      display: inline-block;
+    }
+    div {
+      font-size: 20px;
+      color: black;
+      align-items: center;
+      width: 800px;
+    }
+    .name-field {
+      width: 65%;
+      border-bottom: 1px solid black;
+      text-align: center;
+    }
+    .border-bottom {
+      border-bottom: 1px solid black;
+      text-align: center;
+    }
+    .row-style {
+      width: 100%;
+      flex-direction: row;
+    }
+    .tab4 {
+      margin-left: 4rem;
+    }
+    .right-alignment {
+      text-align: right;
+    }
+    .left-alignment {
+      text-align: left;
+    }
+  </style>
+  <body>
+    <h1>Уверење</h1>
+
+    <div>
+      <p class="name-field">{{ ime }}</p>
+      <p>&nbsp;рођен-а&nbsp;</p>
+      <p class="border-bottom" style="width: 23%">{{ datum_rodjenja }}</p>
+    </div>
+    <div>
+      <p>у&nbsp;</p>
+      <p class="border-bottom" style="width: 20%">{{ mesto_rodjenja }}</p>
+      <p>Република, односно држава</p>
+      <p class="border-bottom" style="width: 20%">{{ drzava_rodjenja }}</p>
+      <p>, уписао-ла је</p>
+      <p class="border-bottom">{{ upisana_godina_studija_broj }}</p>
+      <p>&nbsp; (</p>
+      <p class="border-bottom">{{ upisana_godina_studija }}</p>
+      <p>)</p>
+    </div>
+    <div>
+      <p>годину студија, школске 20 / 21 године, као</p>
+      <p class="border-bottom" style="width: 21%">{{ tip_studiranja }}</p>
+      <p>студент&nbsp;</p>
+      <p class="border-bottom" style="width: 21%">{{ tip_studija }}</p>
+    </div>
+    <div>
+      <p>високошколске установе у&nbsp;</p>
+      <p class="border-bottom" style="width: 40%">{{ mesto_ustanove }}</p>
+      <p>,&nbsp;</p>
+      <p class="border-bottom" style="width: 27.5%">&nbsp;</p>
+    </div>
+    <div>
+      <p class="border-bottom" style="width: 100%">{{ usmerenje }}</p>
+    </div>
+    <div class="right-alignment">
+      <p>Према статуту високошколске установе студије трају</p>
+      <p class="border-bottom" style="width: 30%">
+        {{ trajanje }} / {{ broj_semestara }}
+      </p>
+    </div>
+    <div class="left-alignment">
+      <p>
+        &emsp;&emsp;&emsp;Ово се уверење може употребити за регулисање војне
+        обавезе, права на дечији додатак, породичне пензије, инвалидског
+        додатка, добијања здравствене књижице и легитимације за повлашћену
+        вожњу.
+      </p>
+    </div>
+    <div></div>
+    <div class="left-alignment">
+      <p>
+        &emsp;&emsp;&emsp;Уверење је ослобођено таксе према чл. 18 ставу 1. тач.
+        6,7 и 8 Закона о административним таксама (”Службени гласник РС”, бр.
+        49/92, 70/92, 37/93, 44/93, 67/93, 28/94, 30/94, 53/95, 39/96, 42/98,
+        43/03).
+      </p>
+    </div>
+    <div class="right-alignment">
+      <p style="text-align: center; width: 33%">
+        Овлашћено лице<br />високошколске установе
+      </p>
+    </div>
+    <div class="right-alignment">
+      <p class="border-bottom" style="width: 33%">{{ ovlasceno_lice }}</p>
+    </div>
+  </body>
+</html>
