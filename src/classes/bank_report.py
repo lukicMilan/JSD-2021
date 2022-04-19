@@ -77,4 +77,3 @@ class BankReport:
             "contact_person": self.contact_person,
             "authorized_person": self.authorized_person,
         }
-    
