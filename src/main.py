@@ -6,9 +6,9 @@ def main():
 
   choice = 0
 
-  print("Unesite vas izbor:\n1. Studentsko uverenje\n2. Bankovni izvod\n3.Ugovor o zakupu stana")
-  choice = input("Vas izbor: ")
-  print(choice)
+  print("Unesite redni broj obrasca koji želite da izradite:\n1. Studentsko uverenje\n2. Bankovni izvod\n3. Ugovor o zakupu stana")
+  choice = input("Vaš izbor: ")
+  print("Generisanje: ", choice)
 
   metamodel = metamodel_from_file("metamodel/grammar.tx")
 
@@ -19,7 +19,7 @@ def main():
   elif choice == '3':
     model = metamodel.model_from_file("../zakupStanaTestfile.tff")
   else:
-    print("Uneli ste nepostojeci broj. Molimo Vas ponovite radnju.")
+    print("Uneli ste nepostojeći broj. Molimo Vas ponovite sa validnim podacima.")
   
     # TODO: Fill options from document
   options = {
