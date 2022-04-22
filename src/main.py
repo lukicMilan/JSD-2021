@@ -1,16 +1,27 @@
+from secrets import choice
 from textx import metamodel_from_file
-from classes.document import Document
-from generator.document2html import document2html
-from generator.html2pdf import html2pdf
+from classes.createReport import createReport
 
 def main():
+
+  choice = 0
+
+  print("Unesite vas izbor:\n1. Studentsko uverenje\n2. Bankovni izvod\n3.Ugovor o zakupu stana")
+  choice = input("Vas izbor: ")
+  print(choice)
+
   metamodel = metamodel_from_file("metamodel/grammar.tx")
-  model = metamodel.model_from_file("../testfile.tff")
-    
-  document = Document()
-  document.interpreter(model)
-    
-  # TODO: Fill options from document
+
+  if choice == '1':
+    model = metamodel.model_from_file("../testfile.tff")
+  elif choice == '2':
+    model = metamodel.model_from_file("../bankreportTestfile.tff")
+  elif choice == '3':
+    model = metamodel.model_from_file("../zakupStanaTestfile.tff")
+  else:
+    print("Uneli ste nepostojeci broj. Molimo Vas ponovite radnju.")
+  
+    # TODO: Fill options from document
   options = {
     'page-size': 'Letter',
     'margin-top': '0.35in',
@@ -22,14 +33,7 @@ def main():
     'enable-local-file-access': None
   }
 
-  generated_html = "generated.html"
-  dictionary = document.get_dict()
-
-  if dictionary:
-    document2html(dictionary, 'template.html', generated_html)
-    html2pdf(generated_html, "generated.pdf", options)
-  else:
-    print('There is no content in dictionary. Please add valid input file.')
+  createReport(model, options, choice)
 
 if __name__ == "__main__":
   main()
