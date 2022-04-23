@@ -130,3 +130,6 @@ dmypy.json
 
 src/generated.html
 src/generated.pdf
+src/Bankovni_Izvestaj.pdf
+src/Studentsko_Uverenje.pdf
+src/Zakup_Stana.pdf
