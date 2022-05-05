@@ -60,3 +60,21 @@ pip install requirements.txt
 ```
 cd src && python3 main.py
 ```
+
+### Installing from a local src tree
+
+```
+python3 -m pip install -e .
+```
+
+### Installing from local archives
+
+```
+python3 -m pip install <path>
+```
+
+### Installing from PyPI
+
+```
+python3 -m pip install "PDF-Generator-with-TextX==version_of_project"
+```
