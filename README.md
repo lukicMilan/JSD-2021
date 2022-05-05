@@ -67,12 +67,6 @@ cd src && python3 main.py
 python3 -m pip install -e .
 ```
 
-or
-
-```
-python3 -m pip install <path>
-```
-
 ### Installing from local archives
 
 ```
@@ -82,5 +76,5 @@ python3 -m pip install <path>
 ### Installing from PyPI
 
 ```
-python3 -m pip install "name_of_project"
+python3 -m pip install "PDF-Generator-with-TextX==version_of_project"
 ```
