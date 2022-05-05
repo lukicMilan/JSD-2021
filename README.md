@@ -60,3 +60,27 @@ pip install requirements.txt
 ```
 cd src && python3 main.py
 ```
+
+### Installing from a local src tree
+
+```
+python3 -m pip install -e .
+```
+
+or
+
+```
+python3 -m pip install <path>
+```
+
+### Installing from local archives
+
+```
+python3 -m pip install <path>
+```
+
+### Installing from PyPI
+
+```
+python3 -m pip install "name_of_project"
+```
