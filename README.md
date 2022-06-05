@@ -57,8 +57,18 @@ pip install requirements.txt
 
 ### Generate pdf and html file
 
+#### Mac users:
+
 ```
 cd src && python3 main.py
+```
+
+#### Windows users:
+
+If you are a Windows user, you need to uncomment lines 10-12 and comment/delete lines 6 i 7 in order to execute generator. Then you can execute commands from upper section Mac users.
+
+```
+cd src && python main.py
 ```
 
 ### Installing from a local src tree
@@ -78,3 +88,9 @@ python3 -m pip install <path>
 ```
 python3 -m pip install "PDF-Generator-with-TextX==version_of_project"
 ```
+
+### VS Code language support extension
+
+There is language support extension for our new DSL .tff files in VS Code Marketplace. You can search for TFF FTNTeam3 extension.
+
+![extension](./extension.png)
