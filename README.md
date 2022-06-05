@@ -65,8 +65,6 @@ cd src && python3 main.py
 
 #### Windows users:
 
-If you are a Windows user, you need to uncomment lines 10-12 and comment/delete lines 6 i 7 in order to execute generator. Then you can execute commands from upper section Mac users.
-
 ```
 cd src && python main.py
 ```
