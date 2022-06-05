@@ -88,3 +88,9 @@ python3 -m pip install <path>
 ```
 python3 -m pip install "PDF-Generator-with-TextX==version_of_project"
 ```
+
+### VS Code language support extension
+
+There is language support extension for our new DSL .tff files in VS Code Marketplace. You can search for TFF FTNTeam3 extension.
+
+![extension](./extension.png)
