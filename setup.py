@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "PDF Generator with TextX",
-    version = "0.0.2",
+    version = "0.0.3",
     author = "Team 3",
     author_email = "milanatucakov@gmail.com",
     description = ("Developing a DSL for generating PDF files. It could be used in other apps as a tool for generating dynamic reports, contracts, invoices etc."),
